@@ -1,0 +1,9 @@
+<!-- Aca hicimos la comunicacion entre el contenedor y el formulario y el listado, tambien le mostramos 
+la funcion que va agregar el libro en el listado desde el formulario.
+el event es el que va a marcar el evento a realizar.  -->
+<app-formulario (hayUnNuevoLibro)='agregarLibroALista()'></app-formulario>
+
+<!-- Establecer comunicacion entre el hijo y el padre
+Automaticamente cuando cambia la lista, cambia el listado -->
+<app-listado [libros]='lista'></app-listado>
+

@@ -1,0 +1,27 @@
+<h2 class="m-3" style="text-align: center;">Listado de libros disponibles</h2>
+
+<table class="table">
+    <thead >
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Genero</th>
+            <th>Autor</th>
+            <th>ICBN</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let item of libros'>
+            <td>{{item.nombre}}</td>
+            <td>{{item.descripcion}}</td>
+            <td>{{item.genero}}</td>
+            <td>{{item.autor}}</td>
+            <td>{{item.ibcn}}</td>
+            <td><button (click)="borrarLibro(item.id)">Borrar Libro</button> </td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+

@@ -1,0 +1,28 @@
+
+    <h2 class="m-2" style="text-align: center;">Formulario para cargar libros</h2>
+    <form (ngSubmit)='agregarLibro()' class="container mb-1" >
+    
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]='nombre' class="form-control">
+
+        <label for="descripcion">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion" [(ngModel)]='descripcion' class="form-control">
+
+        <!-- Habria que hacer el select aca!! -->
+        <label for="genero">Genero</label>
+        <select name="genero" id="genero" [(ngModel)]='libro.genero' class="form-control"> 
+            <option *ngFor="let genero of genero" value="genero.id">{{genero.name}}</option> 
+        </select>
+
+        <label for="autor" id="autor">Autor</label>
+        <input type="text" name="autor" id="autor" [(ngModel)]='autor' class="form-control"> 
+
+        <label for="ibcn">IBCN</label>
+        <input type="text" name="ibcn" id="ibcn" [(ngModel)]='ibcn' class="form-control">  
+
+        <button type="submit" class="btn btn-info mt-1">Agregar</button>
+
+<!-- bananas in the box [(ngModel)]='' -->
+
+<!-- REalizamos el formulario, todos los input, vuelve a aparecer la funcion agregarLibro que es la que 
+va a pasar los datos del input al formulario para mandar al listado -->
