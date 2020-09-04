@@ -14,16 +14,18 @@ export class FormularioComponent implements OnInit {
   // Esto es lo que comunica al padre con el hijo, Output es lo que envia los datos 
   @Output() hayUnNuevoLibro = new EventEmitter();
 
-
-  // Se cargan las variables  
-  nombre: '';
-  //descripcion: '';
-  genero: '';
-  autor: '';
-  lended: '';
-  
+  libros = {
+    // Se cargan las variables  
+    nombre: '',
+    //descripcion: '';
+    genero: '',
+    autor: '',
+    lended: '',
+  }
 
   generos: any;
+
+
   constructor(private librosService: LibrosService, private generoService: GeneroService) { }
   //constructor(private librosService: LibrosService){}
   
@@ -33,20 +35,15 @@ export class FormularioComponent implements OnInit {
     console.log("prueba ", this.generos);
   }
 
-  nuevoLibro(){
-    console.log("Guardar libro");
-  }
-
-
   // Esta funcion es la que crea el objeto con todos los datos de los input
   async agregarLibroALista(){
 
      var libro = {
-       nombre: this.nombre,
+       nombre: this.libros.nombre,
        //descripcion: this.descripcion,
-       genero: this.genero,
-       autor: this.autor,
-       lended: this.lended
+       genero: this.libros.genero,
+       autor: this.libros.autor,
+       lended: this.libros.lended
    }
 
     var respuesta: any;
@@ -56,4 +53,11 @@ export class FormularioComponent implements OnInit {
     // Esta es la funcion que va a emitir los datos del event
      this.hayUnNuevoLibro.emit();
 
-  }}
+  }
+
+  nuevoLibro(){
+    console.log("Guardar libro", this.libros);
+  }
+
+
+}
