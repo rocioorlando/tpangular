@@ -22,7 +22,10 @@ export class LibrosService {
 
   // manejamos asincronismo con la tecnica async/await
   // en este metodo se indica la url y lo que queremos enviar al servidor
-  async guardarLibro(unLibro){
+
+  
+  // METODO PUT
+  async guardarLibro(unLibro){  
     try{
       let resultado: any;
 
@@ -40,6 +43,8 @@ export class LibrosService {
     }
   }
 
+
+  // METODO GET
   // para pedir los libros
   async listaDeLibros(){
     try {
@@ -51,13 +56,15 @@ export class LibrosService {
       return resultado;
 
     } 
-    catch (error) {
+    catch(error) {
       console.log(error);  
     }
   }
-}
 
-async borrarLibro(id){
+
+//METODO DELETE
+//para borrar un libro
+async borrarLibro (id){
   try{
 
     let respuesta: any;
@@ -77,7 +84,7 @@ prestarLibros(){
   
 }
 
-
+}
 // async getBooks(){
 //   try
 //   {
