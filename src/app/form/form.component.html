@@ -2,11 +2,11 @@
     <h1 class="display-4"><span style="background-color: #d9534f; color: #FFF">Mis libros</span></h1>
     <form (ngSubmit)='addBook()' class="form-inline justify-content-center">
         <label for="name"><span style="background-color: #d9534f; color: #FFF; font-size: 20px;">Título</span></label>
-        <input type="text" name="name" id="name" [(ngModel)]="name" class="form-control">
+        <input type="text" name="name" id="name" [(ngModel)]="name" class="form-control m-1">
         <label for="author" ><span style="background-color: #d9534f; color: #FFF; font-size: 20px;">Autor</span></label>
-        <input type="text" name="author" id="author" [(ngModel)]="author" class="form-control">
+        <input type="text" name="author" id="author" [(ngModel)]="author" class="form-control m-1">
         <label for="gender" ><span style="background-color: #d9534f; color: #FFF; font-size: 20px;">Género</span></label>
-        <select name="gender" [(ngModel)]="gender" class="form-control" class="form-control"> 
+        <select name="gender" [(ngModel)]="gender" class="form-control" class="form-control m-1"> 
             <option *ngFor="let _gender of genders" [value]="_gender.id">{{_gender.name}}</option> 
         </select>
         <button class="btn btn-warning" type="submit" style="font-weight: 700">Agregar libro</button>

@@ -3,3 +3,7 @@
     background-size: cover;
     font-family: 'Unna';
 }
+
+span {
+    border-radius: 5%;
+}
