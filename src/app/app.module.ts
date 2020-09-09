@@ -1,27 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// Importamos el formulario 
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
-import { ContenedorComponent } from './contenedor/contenedor.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { ListadoComponent } from './listado/listado.component';
-import { PrestarComponent } from './prestar/prestar.component';
+import { FormComponent } from './form/form.component';
+import { ListComponent } from './list/list.component';
+import { ContainerComponent } from './container/container.component';
+import { from } from 'rxjs';
+import { LendComponent } from './lend/lend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContenedorComponent,
-    FormularioComponent,
-    ListadoComponent,
-    PrestarComponent
+    FormComponent,
+    ListComponent,
+    ContainerComponent,
+    LendComponent
   ],
   imports: [
     BrowserModule,
-    // Tambien lo agregamos aca!
-    FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
